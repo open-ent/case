@@ -1,0 +1,25 @@
+    {
+      "name": "fr.openent~case~${caseVersion}",
+      "config": {
+        "main" : "fr.openent.casestandards.Case",
+        "port" : 8172,
+        "app-name" : "CASE",
+        "app-address" : "/case",
+        "app-type" : "SYSTEM",
+        "host": "${host}",
+        "ssl" : $ssl,
+        "auto-redeploy": false,
+        "userbook-host": "${host}",
+        "integration-mode" : "HTTP",
+        "app-registry.port" : 8012,
+        "mode" : "${mode}",
+        "entcore.port" : 8009,
+        "sql" : true,
+        "mongodb" : false,
+        "db-schema" : "casestd",
+        "case" : {
+          "issuer" : "${host}",
+          "max-limit" : 10000
+        }
+      }
+    }
