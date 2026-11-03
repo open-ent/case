@@ -1,0 +1,34 @@
+{
+ "_": "Énoncés que la mise en page du PDF a brouillés (colonnes qui se chevauchent). Clé : texte source, puis début de l'énoncé tel que l'extraction le produit ; valeur : le ou les énoncés rétablis, mot pour mot depuis le PDF, ou [] pour retirer une ligne qui n'est pas un énoncé (prose, en-tête de tableau).",
+ "c1-2026": {
+  "Énoncer le moment de la journée où l’on se situe. -": ["Énoncer le moment de la journée où l’on se situe."],
+  "Savoir que la semaine est une suite de sept jours. -": ["Savoir que la semaine est une suite de sept jours."],
+  "Employer le présent, le futur, le passé composé et le jour": ["Employer le présent, le futur, le passé composé et commencer éventuellement à employer l’imparfait pour évoquer des évènements et les resituer dans le temps."],
+  "Approfondir la notion de saison par des observations sur -": ["Approfondir la notion de saison par des observations sur la végétation et le climat."]
+ },
+ "c2-maths-2024": {
+  "Reconnaitre les solides usuels Un ensemble": ["Reconnaitre les solides usuels suivants : cube, boule, cône, cylindre, pavé."],
+  "Nommer un cube, un pavé et qu’une boite": ["Nommer un cube, un pavé et une boule."],
+  "Décrire un cube ou un pavé Un cube": ["Décrire un cube ou un pavé en utilisant le terme « face ». Connaitre le nombre et la nature des faces d’un cube et d’un pavé."],
+  "Construire des cubes et des À partir": ["Construire des cubes et des pavés."]
+ },
+ "emc-2024": {
+  "Avoir conscience de son À partir": ["Avoir conscience de son intégrité"],
+  "Connaître et appliquer les abordant": ["Connaître et appliquer les règles élémentaires d’hygiène personnelle"],
+  "Connaître et respecter les - l’égalité": ["Connaître et respecter les règles élémentaires de l’intimité personnelle"],
+  "Faire connaître les droits Aborder": ["Faire connaître les droits et libertés fondamentaux institués par la Déclaration des droits de l’homme et du citoyen (1789), la Déclaration universelle des droits de l’homme (1948) et la Charte des droits fondamentaux de l’Union européenne (2000)"],
+  "Mettre en avant certains Lire": ["Mettre en avant certains droits politiques, économiques et sociaux qui en découlent : suffrage universel, droit à l’emploi, à la protection de la santé, à la gratuité de l’enseignement public, accès à la culture, droits environnementaux (Charte de l’environnement)"],
+  "Montrer que les droits Un travail": ["Montrer que les droits fondamentaux s’exercent dans le cadre de la loi (exemple de la liberté d’expression)"],
+  "Approfondir avec les En lien": ["Approfondir avec les droits dits « de troisième génération », qui résultent du droit de chacun de « vivre dans un environnement équilibré et respectueux de la santé » (art. 1er de la Charte de l’environnement)"]
+ },
+ "c3-2020-2023-consolide": {
+  "L'élève est capable de comprendre des textes courts et simples. Exemples": ["L’élève est capable de comprendre des textes courts et simples."],
+  "L’étude des écosystèmes se prête": [],
+  "Au travers de quelques exemples, on montre": [],
+  "Situer la terre dans le système solaire. Décrire les conditions": [],
+  "Identifier des ressources naturelles moyenne": [],
+  "Identifier un risque naturel à partir d’un Décrire": [],
+  "Décrire et comparer des éléments sonores issus de la Écoutes": ["Décrire et comparer des éléments sonores issus de la biodiversité, de contextes musicaux, d’aires géographiques ou culturelles différents et dans un temps historique, contemporain, proche ou lointain."],
+  "Repérer et nommer une organisation simple dans un le rythme": ["Repérer et nommer une organisation simple dans un extrait musical : répétition d’une mélodie, d’un motif rythmique, d’un thème, d’une partie caractéristique, etc. ; en déduire une forme simple (couplet/refrain, ABA par exemple)."]
+ }
+}

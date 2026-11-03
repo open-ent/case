@@ -1,0 +1,112 @@
+{
+ "source": "annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf",
+ "note": "PDF sans couche texte : objectifs d'apprentissage du CM1 et du CM2 transcrits à la lecture des pages, mot pour mot ; la sixième n'est pas reprise (second degré). Les intitulés en gras des tableaux (« Lumière », « Classification du vivant ») sont repris comme groupes. Les propositions de démarches et d'activités ne sont pas reprises.",
+ "sections": [
+  ["La matière, les mouvements et les signaux", "CM1", "États et constitution de la matière à l’échelle macroscopique › Masse et volume", [
+   "Comparer les masses de différents objets à l’aide d’un dispositif simple qui peut être conçu par les élèves (poulie et cordelette, balance romaine, à fléau, à plateaux).",
+   "Mesurer la masse d’un solide ou d’un liquide à l’aide d’une balance (balance romaine, balance à plateaux, balance électronique) en tarant la balance le cas échéant."]],
+  ["La matière, les mouvements et les signaux", "CM1", "États et constitution de la matière à l’échelle macroscopique › Mélanges", [
+   "Distinguer des mélanges homogènes et des mélanges hétérogènes.",
+   "Séparer les constituants d’un mélange de solides ou d’un mélange solide-liquide par tamisage, décantation, filtration.",
+   "Constater que certains solides peuvent se dissoudre dans l’eau.",
+   "Observer le phénomène de saturation lors du mélange d’un solide dans l’eau et en rendre compte quantitativement."]],
+  ["La matière, les mouvements et les signaux", "CM1", "Différents types de mouvement", [
+   "Mesurer une distance lors du déplacement d’un objet.",
+   "Mesurer une durée, comme intervalle entre deux instants, lors du déplacement d’un objet."]],
+  ["La matière, les mouvements et les signaux", "CM1", "Signaux › Lumière", [
+   "Observer et classer des matériaux selon qu’ils sont transparents, opaques à la lumière ou translucides.",
+   "Produire expérimentalement une ombre (déficit de lumière associé à une source) à l’aide d’un objet opaque et distinguer ombre propre et ombre portée (sur le sol ou sur un écran).",
+   "Produire des ombres et associer leurs positions et leurs tailles à celles de la source lumineuse et de l’objet opaque.",
+   "Observer, schématiser et nommer les phases de la Lune."]],
+  ["La matière, les mouvements et les signaux", "CM2", "États et constitution de la matière à l’échelle macroscopique › Masse et volume", [
+   "Effectuer des conversions d’unités de masse (en se limitant à des unités usuelles : tonne, kilogramme, gramme et milligramme).",
+   "Mesurer le volume d’un liquide et mesurer celui d’un solide (plein non soluble) par déplacement de liquide.",
+   "Mettre en évidence expérimentalement que la masse totale se conserve lors du mélange d’un solide dans un liquide.",
+   "Mettre en évidence expérimentalement que, lorsqu’un solide est dissout dans un liquide, le volume total n’est pas nécessairement la somme du volume du solide et du liquide."]],
+  ["La matière, les mouvements et les signaux", "CM2", "États et constitution de la matière à l’échelle macroscopique › Mélanges", [
+   "Récupérer un solide dissout dans l’eau par évaporation."]],
+  ["La matière, les mouvements et les signaux", "CM2", "États et constitution de la matière à l’échelle macroscopique › Propriétés de la matière", [
+   "Différencier les états physiques solide (forme et volume propres), liquide (volume propre, absence de forme propre et surface horizontale) et gazeux (ni forme propre ni volume propre).",
+   "Observer des changements d’état physique et leur réversibilité. Nommer les changements d’état.",
+   "Identifier les différents états physiques de la matière dans la nature, en particulier ceux de l’eau."]],
+  ["La matière, les mouvements et les signaux", "CM2", "Différents types de mouvement", [
+   "Observer et identifier le mouvement rectiligne ou circulaire d’un objet, en fonction de l’observateur.",
+   "Décrire le mouvement de la Terre par rapport au Soleil et la situer dans le système solaire.",
+   "Effectuer des conversions d’unités de distance et de temps."]],
+  ["La matière, les mouvements et les signaux", "CM2", "Signaux › Électricité", [
+   "Réaliser un circuit électrique à une boucle associant un générateur (pile), un interrupteur, un ou deux récepteurs (ampoule) pour mettre en évidence la circulation du courant électrique.",
+   "Rechercher des informations sur les règles de sécurité électrique et les prendre en compte dans son activité.",
+   "Identifier des matériaux conducteurs et isolants électriques."]],
+
+  ["Les êtres vivants dans leur environnement", "CM1", "Unité et diversité du vivant › Classification du vivant", [
+   "Définir une espèce comme un ensemble d’individus interféconds.",
+   "Réaliser une classification en groupes emboités à partir d’un petit nombre d’espèces possédant des attributs identifiés, puis en déduire les liens de parenté."]],
+  ["Les êtres vivants dans leur environnement", "CM1", "Unité et diversité du vivant › Biodiversité actuelle et passée", [
+   "Identifier des espèces en utilisant une clé de détermination."]],
+  ["Les êtres vivants dans leur environnement", "CM1", "Reproduction, croissance et développement › Cycle de vie", [
+   "Décrire les étapes du développement des animaux de la fécondation à la naissance.",
+   "Mettre en relation le type de fécondation (interne ou externe) avec le mode de reproduction ovipare et vivipare des animaux."]],
+  ["Les êtres vivants dans leur environnement", "CM1", "Les écosystèmes › Écosystème", [
+   "Définir un écosystème comme un ensemble d’êtres vivants, leur milieu de vie et leurs relations."]],
+  ["Les êtres vivants dans leur environnement", "CM1", "Les écosystèmes › Place des êtres vivants dans les réseaux alimentaires", [
+   "Relier la production de matière par les animaux à leur consommation de nourriture provenant d’autres êtres vivants.",
+   "Expérimenter pour identifier les besoins des végétaux et les relier à leur capacité à produire de la matière organique.",
+   "Représenter par un réseau les liens alimentaires entre les êtres vivants.",
+   "Envisager les conséquences d’une action humaine sur un réseau alimentaire."]],
+  ["Les êtres vivants dans leur environnement", "CM1", "La Terre, une planète active › La météorologie", [
+   "Réaliser et exploiter des mesures météorologiques en utilisant des capteurs (thermomètre, pluviomètre, anémomètre).",
+   "Caractériser à partir de données physiques les variations météorologiques de son espace de vie au cours du temps (journée, semaine, mois, saison)."]],
+  ["Les êtres vivants dans leur environnement", "CM2", "Unité et diversité du vivant › Biodiversité actuelle et passée", [
+   "Distinguer différentes échelles de temps : l’échelle des temps géologiques (notion de temps long) et celle de l’histoire de l’être humain.",
+   "Caractériser des changements de la biodiversité au cours de l’histoire de la Terre par l’exploitation de fossiles."]],
+  ["Les êtres vivants dans leur environnement", "CM2", "Les écosystèmes › Conséquences des actions humaines sur l’environnement", [
+   "S’impliquer dans des actions et des projets relatifs à l’éducation au développement durable (EDD) et à la transition écologique sur un thème au choix : changement climatique, biodiversité, gestion des ressources et des déchets, etc., afin de développer la capacité à agir individuellement et collectivement.",
+   "Développer un rapport sensible à la nature et prendre conscience de la nécessité et des possibilités d’agir, individuellement et collectivement pour protéger l’environnement, dans le cadre d’un projet EDD."]],
+  ["Les êtres vivants dans leur environnement", "CM2", "La Terre, une planète active › L’activité terrestre", [
+   "Repérer des manifestations de l’activité interne ou externe de la Terre.",
+   "Définir la notion de risque naturel et identifier les mesures de prévention et de protection associées, à partir d’un exemple au choix : séisme, éruption volcanique, inondation, tempête, cyclone, érosion littorale, glissement de terrain, etc."]],
+  ["Les êtres vivants dans leur environnement", "CM2", "La Terre, une planète active › Le climat local", [
+   "Définir le climat local comme l’ensemble des conditions météorologiques pendant plusieurs années dans une région.",
+   "Décrire quelques conséquences du changement climatique récent sur son environnement proche.",
+   "Citer des stratégies d’atténuation ou d’adaptation au changement climatique, en privilégiant les exemples locaux."]],
+
+  ["Le corps humain et la santé", "CM1", "Le cerveau : introduction à quelques grandes fonctions", [
+   "Localiser le cerveau et l’identifier comme un organe impliqué dans différentes fonctions : perception sensorielle, élaboration de la commande motrice, langage, apprentissage et mémorisation, élaboration des émotions, production des rêves.",
+   "Comprendre quelques mécanismes perceptifs et comment notre perception du monde peut être différente de sa réalité physique.",
+   "Déterminer des stratégies pour focaliser son attention sur une tâche identifiée et/ou mémoriser une information (mémoire à court terme et mémoire à long terme)."]],
+  ["Le corps humain et la santé", "CM1", "Puberté et reproduction humaine", [
+   "Décrire et identifier les changements morphologiques du corps au moment de la puberté.",
+   "Comprendre que la puberté se produit à des âges différents selon les individus, qu’elle n’a pas les mêmes effets et que ces changements sont normaux."]],
+  ["Le corps humain et la santé", "CM2", "Alimentation humaine › Besoins alimentaires et nutrition humaine", [
+   "Exploiter des données mettant en évidence le besoin de matière pour la croissance et le développement des êtres vivants.",
+   "Exploiter des données pour expliquer la variation des besoins alimentaires au cours de la croissance et selon l’activité physique.",
+   "Identifier et localiser la transformation des aliments dans l’appareil digestif (mastication par les dents, changements de texture lors du trajet) en nutriments utilisables par les organes.",
+   "Nommer et localiser les différents organes du système digestif, en les associant à leur fonction.",
+   "Identifier le rôle de la circulation sanguine dans l’approvisionnement des organes en nutriments.",
+   "Associer l’augmentation de l’activité cardiaque lors d’un effort physique aux besoins accrus des muscles en nutriments apportés par la circulation sanguine."]],
+  ["Le corps humain et la santé", "CM2", "Puberté et reproduction humaine", [
+   "Nommer les organes reproducteurs et les associer à leur fonction.",
+   "Définir scientifiquement les menstruations (règles), composante normale et naturelle du développement physique des filles, qui se mettent en place à la puberté : renouvèlement périodique de la paroi interne de l’utérus (épaississement puis destruction partielle occasionnant des saignements)."]],
+
+  ["Les objets techniques au cœur de la société", "CM1", "Les objets techniques en réponse aux besoins des individus et de la société", [
+   "Repérer les évolutions d’un objet dans différents contextes (historique, géographique, économique, culturel, technologique, dans le cadre du développement durable).",
+   "Comparer des réponses à des besoins dans différents contextes."]],
+  ["Les objets techniques au cœur de la société", "CM1", "Description du fonctionnement et de la constitution d’objets techniques", [
+   "Identifier les fonctions assurées par les différents composants ou formes ou matériaux d’un objet technique.",
+   "Associer les solutions technologiques aux fonctions techniques.",
+   "Représenter graphiquement à l’aide de croquis à main levée les éléments d’un objet technique.",
+   "Identifier les sous-ensembles constituant un objet technique.",
+   "Décrire à l’aide d’un croquis le fonctionnement d’un objet technique."]],
+  ["Les objets techniques au cœur de la société", "CM1", "Programmation d’objets techniques › Algorithmes et programmation", [
+   "Traduire un programme simple en langage naturel.",
+   "Utiliser un programme pour agir sur le comportement d’un objet technique."]],
+  ["Les objets techniques au cœur de la société", "CM2", "Démarche de conception et de réalisation d’un objet technique", [
+   "Rechercher des idées de solutions à l’aide de croquis pour résoudre un problème technique donné.",
+   "Associer une contrainte à un choix de matériau en fonction de ses propriétés physiques.",
+   "Organiser le travail de conception d’une maquette et la fabriquer.",
+   "Comparer des solutions par une analyse critique (notamment dans le cadre de la transition écologique et du développement durable)."]],
+  ["Les objets techniques au cœur de la société", "CM2", "Programmation d’objets techniques › Algorithmes et programmation", [
+   "Comprendre un algorithme agissant sur le comportement d’un objet technique.",
+   "Modifier, tester et valider un programme au regard du comportement de l’objet programmé."]]
+ ]
+}
