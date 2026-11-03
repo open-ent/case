@@ -14486,9 +14486,9 @@
    "statusStartDate": "2025-09-01"
   },
   {
-   "identifier": "31816ead-17b3-59cd-a67a-8cee40cf45cb",
-   "uri": "urn:uuid:31816ead-17b3-59cd-a67a-8cee40cf45cb",
-   "fullStatement": "Ajouter ou soustraire 1 ou 2 à L’ un nombre.",
+   "identifier": "6ce25edc-2937-5a9e-a184-09df2bfae077",
+   "uri": "urn:uuid:6ce25edc-2937-5a9e-a184-09df2bfae077",
+   "fullStatement": "Ajouter ou soustraire 1 ou 2 à un nombre.",
    "humanCodingScheme": "C2.MAT.1.3.2.1",
    "CFItemType": "Objectif d’apprentissage",
    "CFItemTypeURI": {
@@ -14847,9 +14847,9 @@
    "statusStartDate": "2025-09-01"
   },
   {
-   "identifier": "a9913609-aafb-55b3-b635-a711b45a909d",
-   "uri": "urn:uuid:a9913609-aafb-55b3-b635-a711b45a909d",
-   "fullStatement": "Savoir interpréter, représenter, écrire et 1 1 1 1 1 1 fractions , , , , , et 2 3 4",
+   "identifier": "33953a48-0792-597e-ab75-2c193afdeeed",
+   "uri": "urn:uuid:33953a48-0792-597e-ab75-2c193afdeeed",
+   "fullStatement": "Savoir interpréter, représenter, écrire et lire les fractions 1/2, 1/3, 1/4, 1/5, 1/6, 1/8 et 1/10.",
    "humanCodingScheme": "C2.MAT.1.5.1",
    "CFItemType": "Objectif d’apprentissage",
    "CFItemTypeURI": {
@@ -15341,9 +15341,9 @@
    "notes": "Exemples de réussite :\n- L’élève comprend et utilise les phrases suivantes : « La somme de 12 et de 25 est 37. », « 12 et 25 sont les termes de l’addition 12 + 25. », « La différence entre 60 et 37 est 23. », « 60 et 37 sont les termes de la soustraction 60 - 37. »\n- L’élève sait traiter les additions et les soustractions posées avec des nombres entiers inférieurs ou égaux à 10 000.\n- L’élève sait traiter les additions et les soustractions posées avec des nombres décimaux pour résoudre des problèmes liés à la monnaie.\n- L’élève comprend et utilise les phrases suivantes : « Le produit de 3 et de 25 est 75. », « 3 et 25 sont les facteurs de la multiplication 3 × 25. », « 75 est un multiple de 25. », « les nombres pairs sont des multiples de 2. » et « Les nombres impairs ne sont pas des multiples de 2 ».\n- L’élève montre sa compréhension du sens de la division lors de la résolution de problèmes.\n- L’élève comprend que la division est l’opération inverse de la multiplication.\n- On a 7 × 13 = 91, donc 91 ÷ 7 = 13 et 91 ÷ 13 = 7.\n- Par exemple, l’élève sait calculer 16 × 548 ou 548 × 16 en posant l’opération avec le re ayant le moins de chiffres sur la deuxième ligne.\n\nSource : BO n° 41 du 31 octobre 2024 — https://www.education.gouv.fr/sites/default/files/document/Annexe%204%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20du%20cycle%202-403821.pdf"
   },
   {
-   "identifier": "7b37a288-f317-589b-8e03-5e0d6d400978",
-   "uri": "urn:uuid:7b37a288-f317-589b-8e03-5e0d6d400978",
-   "fullStatement": "Poser et effectuer des multiplications d’un nombre à nomb deux ou trois chiffres par un nombre à un ou deux chiffres.",
+   "identifier": "5d2fcb10-73dd-5f49-b1e9-d28d265e6b36",
+   "uri": "urn:uuid:5d2fcb10-73dd-5f49-b1e9-d28d265e6b36",
+   "fullStatement": "Poser et effectuer des multiplications d’un nombre à deux ou trois chiffres par un nombre à un ou deux chiffres.",
    "humanCodingScheme": "C2.MAT.1.2.12",
    "CFItemType": "Objectif d’apprentissage",
    "CFItemTypeURI": {
@@ -23125,9 +23125,9 @@
    "notes": "Exemples de réussite :\n- Lors des activités ritualisées, l’élève comprend les formules d’accueil, les encouragements, les consignes et les instructions formulés. Hello! Good morning! / Good afternoon! Welcome! (A1) Nice to see you! (pré-A1) Open your book. Take a pen. Good job! (A1) Well done! (basque) (pré-A1) Nola zara?\n- À partir de l’écoute de l’album What’s The Time, Mr. Wolf? d’Annie Kubler, l’élève comprend les expressions très courantes liées à la routine quotidienne. (A1) « What’s the time, Mr Wolf? It’s eight o’clock. Time for breakfast! But I’m still hungry! »\n- À partir du visionnage du dessin animé Peppa Pig Visits ralia de Mark Baker et Neville Astley, l’élève reconnait les spécificités des personnages australiens. (A1) « The outback is also a special magical place for us. Here is our picnic spot with our special picnic tree! »\n- Lors d’une rencontre avec les élèves de CM2, les élèves de CE2 enquêtent, en utilisant une grille, sur les gouts alimentaires des CM2. L’élève de CE2 comprend les énoncés simples par lesquels l’élève de CM2 exprime ce qu’il préfère ; il en garde une trace en positionnant les images correspondantes dans la colonne appropriée. Il s’aide alors des pictogrammes symbolisant les différentes formulations. (A1) I prefer chocolate ice cream. Chocolate is better. (pré-A1) I love carrots. (A1) I dislike spinach. (A1) (corse) Mi piacenu di più I migliacci è u brocciu.\n- (A1) À l’issue du visionnage d’une saynète extraite de Sesame Street et jouée par les élèves, un élève spectateur identifie, par un mot ou une image, les émotions exprimées par des camarades acteurs qui manifestent avec des intonations différentes colère, tristesse, surprise, peur, etc. au sein d’un court dialogue tel que : (A1) « Waiter, there is a fly in my soup! » (A1) « There is a fly in your soup, Sir? »\n- Lors des activités ritualisées, un élève indique, en montrant ou déplaçant des étiquettes situées dans le coin langue vivante, la date et la météo du jour en suivant les consignes : Today is Thursday, (A1) the 25th of April. (pré-A1) It’s sunny.\n\nSource : https://www.education.gouv.fr/sites/default/files/document/Annexe%201%20%E2%80%93%20Programme%20de%20langues%20vivantes%20%C3%A9trang%C3%A8res%20et%20r%C3%A9gionales%20pour%20le%20cycle%202%20-481187.pdf"
   },
   {
-   "identifier": "b3ef6775-9eb9-53c5-b8c8-3c35f704a45e",
-   "uri": "urn:uuid:b3ef6775-9eb9-53c5-b8c8-3c35f704a45e",
-   "fullStatement": "Reconnaitre les pronoms personnels sujets, compléments et les déterminants possessifs (A1) pour déterminer qui parle et Aust de qui l’on parle.",
+   "identifier": "ecfda70d-f839-522f-82fc-13d65826a6c6",
+   "uri": "urn:uuid:ecfda70d-f839-522f-82fc-13d65826a6c6",
+   "fullStatement": "Reconnaitre les pronoms personnels sujets, compléments et les déterminants possessifs (A1) pour déterminer qui parle et de qui l’on parle.",
    "humanCodingScheme": "C2.LVE.1.1.17",
    "CFItemType": "Objectif d’apprentissage",
    "CFItemTypeURI": {
@@ -27028,9 +27028,9 @@
    "notes": "Notions abordées :\n- Citoyenneté Droits civils et politiques Devoirs Symboles républicains\n\nDémarches et situations d’apprentissage possibles :\n- À partir de l’article 7 de la Convention internationale des droits de l’enfant, faire comprendre que tout enfant possède dès sa naissance des droits, dont celui d’acquérir une nationalité. Par des exemples choisis illustrant des droits, comprendre qu’en France, tout individu bénéficie de droits comme celui à l’éducation, d’être soigné, etc.\n- L’élève doit être en mesure à partir de la lecture d’articles choisis de la Déclaration des droits de l’homme et du citoyen (DDHC) de citer quelques droits individuels et collectifs comme le droit à la liberté d’expression (art. 11), d’opinion (art. 10), le droit à la sûreté (art. 2). Il doit savoir les distinguer des droits politiques comme le droit de vote et d’éligibilité qui permettent de participer aux décisions de la vie publique. Ces droits sont illustrés avec des situations concrètes de la vie quotidienne.\n- L’expérience des conseillers municipaux juniors est considérée en vue d’expliquer le rôle politique du citoyen qui, par le vote, participe à la vie de sa cité. Une rencontre avec des élus locaux (maire de la commune, conseillers municipaux) peut être ainsi l’occasion pour les élèves d’appréhender l’engagement de citoyennes et de citoyens actifs qui se sont portés candidats à une élection municipale, et de comprendre les modalités d’exercice de leur mandat local.\n- La participation au concours Le Parlement des enfants favorise la pratique du dialogue et du débat démocratique des élèves. Cette action éducative permet aux élèves de découvrir le rôle du législateur.\n- L’étude de plusieurs articles de la DDHC permet également de caractériser différents devoirs du citoyen, comme sa participation au financement des charges supportées par l’État par le paiement de l’impôt (art. 13).\n- En expliquant que les électeurs et les électrices sont à l’origine des lois en vigueur par l’intermédiaire de leurs représentants démocratiquement élus, et en se référant à l’article 3 de la DDHC et l’article 3 de la Constitution affirmant que la souveraineté nationale appartient au peuple, l’élève doit comprendre que les citoyennes et les citoyens participent de l’élaboration des lois en même temps qu’ils doivent les respecter. cription d’une carte électorale peut être l’occasion de faire réfléchir à la notion de devoir civique à partir de la mention « Voter est roit, c’est aussi un devoir civique » et de faire comprendre que par r vote citoyennes et citoyens assurent le bon fonctionnement de la démocratie.\n- [EDD] Des exemples choisis de comportements dans la vie quotidienne (recyclage, réduction des déchets, lutte contre le gaspillage, etc.) sont mis en lien avec l’éco-citoyenneté et présentés comme un autre exemple de devoir civique, celui de défendre l’environnement.\n- La République est héritière d’une histoire, elle se rend visible par des symboles fédérateurs. Connaître des lieux de la mémoire collective et les dates de commémorations, et faire apparaître ce que nous devons aux générations antérieures (visiter des lieux de mémoire ; lire un témoignage d’ancien combattant ; identifier des traces laissées par l’histoire). Participer à la commémoration du 11 novembre.\n- Connaître le drapeau européen, comprendre pourquoi il est associé au drapeau tricolore sur les bâtiments publics et reconnaitre l’hymne européen.\n\nSource : BO n° 24 du 13 juin 2024 — https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20d%E2%80%99enseignement%20moral%20et%20civique%20du%20cours%20pr%C3%A9paratoire%20%C3%A0%20la%20classe%20terminale%20des%20voies%20g%C3%A9n%C3%A9rale%2C%20technologique%20et%20professionnelle%20et%20des%20classes%20pr%C3%A9parant%20au%20CAP-402159.pdf"
   },
   {
-   "identifier": "fcb62881-05ae-5fe4-a300-52b609061629",
-   "uri": "urn:uuid:fcb62881-05ae-5fe4-a300-52b609061629",
-   "fullStatement": "Comprendre que le terme La des de devoir peut aussi désigner une réalité plus un d morale, qui doit guider le leu citoyen dans son comportement dans l’espace public",
+   "identifier": "19eb67e9-5e3b-5d1a-8441-8253e7f509cd",
+   "uri": "urn:uuid:19eb67e9-5e3b-5d1a-8441-8253e7f509cd",
+   "fullStatement": "Comprendre que le terme de devoir peut aussi désigner une réalité plus morale, qui doit guider le citoyen dans son comportement dans l’espace public",
    "humanCodingScheme": "C3.EMC.2.1.4",
    "CFItemType": "Contenu d’enseignement",
    "CFItemTypeURI": {
@@ -64654,11 +64654,11 @@
    "lastChangeDateTime": "2026-11-03T00:00:00"
   },
   {
-   "identifier": "2b6bfacb-e2f7-5876-b7fa-425ac75e0eb9",
+   "identifier": "43a647ff-d0ac-5c5e-9ba2-643cef605789",
    "associationType": "isChildOf",
    "originNodeURI": {
-    "identifier": "31816ead-17b3-59cd-a67a-8cee40cf45cb",
-    "uri": "urn:uuid:31816ead-17b3-59cd-a67a-8cee40cf45cb"
+    "identifier": "6ce25edc-2937-5a9e-a184-09df2bfae077",
+    "uri": "urn:uuid:6ce25edc-2937-5a9e-a184-09df2bfae077"
    },
    "destinationNodeURI": {
     "identifier": "0a5f2f04-145b-584f-b560-5b0d51820b4b",
@@ -64939,11 +64939,11 @@
    "lastChangeDateTime": "2026-11-03T00:00:00"
   },
   {
-   "identifier": "c1f5a22c-75cb-5ec8-b702-3fceafd91ba5",
+   "identifier": "f053fe6e-126a-5cab-893a-aecac4a5bbff",
    "associationType": "isChildOf",
    "originNodeURI": {
-    "identifier": "a9913609-aafb-55b3-b635-a711b45a909d",
-    "uri": "urn:uuid:a9913609-aafb-55b3-b635-a711b45a909d"
+    "identifier": "33953a48-0792-597e-ab75-2c193afdeeed",
+    "uri": "urn:uuid:33953a48-0792-597e-ab75-2c193afdeeed"
    },
    "destinationNodeURI": {
     "identifier": "179b5ada-9b6b-5392-9ba0-06b270287716",
@@ -65329,11 +65329,11 @@
    "lastChangeDateTime": "2026-11-03T00:00:00"
   },
   {
-   "identifier": "4cd5e096-9e32-536b-a0e8-ef01c4f7a309",
+   "identifier": "715aa57b-b9d6-5dd7-879f-9fa60a406a8f",
    "associationType": "isChildOf",
    "originNodeURI": {
-    "identifier": "7b37a288-f317-589b-8e03-5e0d6d400978",
-    "uri": "urn:uuid:7b37a288-f317-589b-8e03-5e0d6d400978"
+    "identifier": "5d2fcb10-73dd-5f49-b1e9-d28d265e6b36",
+    "uri": "urn:uuid:5d2fcb10-73dd-5f49-b1e9-d28d265e6b36"
    },
    "destinationNodeURI": {
     "identifier": "b7d33bdb-2ac6-551f-af6f-7b21c00e27cd",
@@ -71464,11 +71464,11 @@
    "lastChangeDateTime": "2026-11-03T00:00:00"
   },
   {
-   "identifier": "61f212ce-7107-5ca3-bd9a-f52a059ec001",
+   "identifier": "afc4f415-096b-5524-8ad3-9be5ceebcc83",
    "associationType": "isChildOf",
    "originNodeURI": {
-    "identifier": "b3ef6775-9eb9-53c5-b8c8-3c35f704a45e",
-    "uri": "urn:uuid:b3ef6775-9eb9-53c5-b8c8-3c35f704a45e"
+    "identifier": "ecfda70d-f839-522f-82fc-13d65826a6c6",
+    "uri": "urn:uuid:ecfda70d-f839-522f-82fc-13d65826a6c6"
    },
    "destinationNodeURI": {
     "identifier": "efdd1913-a235-5752-b099-4f24e7da522b",
@@ -74554,11 +74554,11 @@
    "lastChangeDateTime": "2026-11-03T00:00:00"
   },
   {
-   "identifier": "530ac288-c699-5b2b-8f71-84d38ccf07f9",
+   "identifier": "09675542-02bf-5495-857b-eca7fcc60f50",
    "associationType": "isChildOf",
    "originNodeURI": {
-    "identifier": "fcb62881-05ae-5fe4-a300-52b609061629",
-    "uri": "urn:uuid:fcb62881-05ae-5fe4-a300-52b609061629"
+    "identifier": "19eb67e9-5e3b-5d1a-8441-8253e7f509cd",
+    "uri": "urn:uuid:19eb67e9-5e3b-5d1a-8441-8253e7f509cd"
    },
    "destinationNodeURI": {
     "identifier": "04186f43-5b11-5eb3-8746-e5112b859622",
