@@ -6,7 +6,7 @@ wikis, cartes mentales, frises, casiers) et le référentiel auquel s'alignent l
 
 | | |
 |---|---|
-| Énoncés | 2 781, dont 2 331 énoncés terminaux (1 878 en vigueur au 03/11/2026) |
+| Énoncés | 2 743, dont 2 292 énoncés terminaux (1 839 en vigueur au 04/11/2026) |
 | Arborescence | Cycle › Enseignement › Domaine › Sous-domaine › énoncé |
 | Niveaux | `educationLevel` : `PS` `MS` `GS` `CP` `CE1` `CE2` `CM1` `CM2` |
 | Validité | `statusStartDate` / `statusEndDate`, par niveau et par texte |
@@ -52,7 +52,8 @@ rentrée à venir**, chacun avec ses dates. Un énoncé qui ne s'applique qu'à 
 Les contenus d'un texte remplacé à la rentrée suivante sont rangés sous un domaine
 « Programme de 2020 (jusqu'au 31/08/2027) », pour ne pas se mêler à ceux du texte qui lui succède.
 Pour ces textes transitoires, on reprend les attendus de fin de cycle et les compétences
-travaillées, pas le détail des connaissances associées. La sixième et le collège ne sont pas repris.
+travaillées, pas le détail des connaissances associées. La sixième et le collège forment un référentiel
+à part, [`programmes-college`](../programmes-college/README.md), tiré de la même chaîne.
 
 ## Régénérer
 
@@ -68,7 +69,9 @@ python3 build.py /tmp/programmes/txt > ../../../src/main/resources/referentiels/
   couche texte**. Leurs objectifs d'apprentissage ont été transcrits à la lecture des pages, mot pour
   mot ; les propositions d'activités ne l'ont pas été.
 - `corrections.json` : les énoncés que la mise en page a brouillés (colonnes qui se chevauchent),
-  rétablis à la main depuis le PDF.
+  rétablis à la main depuis le PDF. `python3 build.py … | …` puis une relecture des énoncés courts, des
+  majuscules au milieu d'une phrase et des chiffres isolés (« 1, 5 » : domaines du socle) repère ceux
+  qui restent.
 - Deux générations sur les mêmes textes produisent les **mêmes identifiants**. Changer `NS` ou le
   calcul des clés dans `build.py` rendrait orphelins les badges délivrés et les contenus classés.
 

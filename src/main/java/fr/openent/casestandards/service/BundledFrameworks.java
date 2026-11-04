@@ -35,7 +35,8 @@ public class BundledFrameworks {
 
 	private static final Logger log = LoggerFactory.getLogger(BundledFrameworks.class);
 	public static final String DEFAULT_OWNER = "open-ent-catalogue";
-	private static final String[] DEFAULT_RESOURCES = {"referentiels/programmes-1d.json"};
+	private static final String[] DEFAULT_RESOURCES = {
+			"referentiels/programmes-1d.json", "referentiels/programmes-college.json"};
 
 	private final CaseContext ctx;
 	private final FrameworkRepository repository;

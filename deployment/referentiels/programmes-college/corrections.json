@@ -1,0 +1,20 @@
+{
+ "_": "Énoncés que la mise en page du PDF a brouillés, rétablis à la main depuis le PDF. Même format que ../programmes-1d/corrections.json, qui s'applique aussi aux textes communs (sixième).",
+ "c4-maths-2026": {
+  "Manipuler les trois identités remarquables": [
+   "Manipuler les trois identités remarquables pour développer et factoriser : a² + 2ab + b² = (a + b)² ; a² – 2ab + b² = (a – b)² ; a² – b² = (a – b)(a + b)."
+  ],
+  "Rendre compte d’une augmentation ou une diminution exprimée en pourcentages au moyen d’un coefficient multiplicateur Définir": [
+   "Rendre compte d’une augmentation ou une diminution exprimée en pourcentages au moyen d’un coefficient multiplicateur",
+   "Définir le coefficient multiplicateur."
+  ]
+ },
+ "c4-2020-consolide": {
+  "Humanisme, réformes et À conflits religieux": [
+   "Humanisme, réformes et conflits religieux."
+  ],
+  "Femmes et hommes dans cadre la société": [
+   "Femmes et hommes dans la société des années 1950 aux années 1980 : nouveaux enjeux sociaux et culturels, réponses politiques."
+  ]
+ }
+}

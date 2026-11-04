@@ -26,7 +26,7 @@ from extract import IGNORED, extract, norm  # noqa: E402
 
 # Date d'édition du référentiel, à avancer quand son contenu change. Elle n'est pas tirée de
 # l'horloge : le module ne recharge un référentiel livré que si son fichier a changé.
-EDITION = "2026-11-03"
+EDITION = "2026-11-04"
 NS = uuid.UUID("6f4a1e0c-5b0e-4c8e-9a35-0d3c1e7a1d10")   # espace de noms du référentiel, à ne jamais changer
 DOCUMENT_KEY = "open-ent:programmes-ecole-primaire"
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -51,6 +51,10 @@ CODES = {
     "agir, s'exprimer, comprendre a travers les activites artistiques": "AAR",
     "se reperer dans le temps et l'espace": "RTE",
     "decouvrir le monde du vivant, de la matiere et des objets": "DMV",
+    # Collège
+    "physique-chimie": "PHC", "sciences de la vie et de la terre": "SVT", "technologie": "TEC",
+    "education aux medias et a l'information": "EMI",
+    "education a la vie affective et relationnelle, et a la sexualite": "EVARS",
 }
 
 # Rentrées : un texte s'applique à un niveau du 1er septembre de sa rentrée au 31 août qui précède
@@ -146,6 +150,8 @@ SOURCES = [
 ]
 
 LEAF_TYPES = [
+    ("reperes de progressivite", "Repère de progressivité"),
+    ("reperes annuels", "Repère annuel de programmation"),
     ("contenus d", "Contenu d’enseignement"),
     ("notions et competences", "Notion et compétence"),
     ("attendus de fin de cycle", "Attendu de fin de cycle"),
@@ -162,10 +168,6 @@ ALIASES = {"langues vivantes (etrangeres ou regionales)": "Langues vivantes étr
            "histoire et geographie": "Histoire-géographie"}
 
 
-def uid(*parts):
-    return str(uuid.uuid5(NS, "\x1f".join(parts)))
-
-
 def leaf_type(table):
     t = norm(table or "")
     return next((label for prefix, label in LEAF_TYPES if t.startswith(prefix)), "Objectif d’apprentissage")
@@ -177,20 +179,40 @@ def tidy(statement):
     return s[:1].upper() + s[1:] if s else s
 
 
-CORRECTIONS = {k: v for k, v in json.load(open(os.path.join(HERE, "corrections.json"), encoding="utf-8")).items()
-               if not k.startswith("_")}
+def load_corrections(path):
+    return {k: v for k, v in json.load(open(path, encoding="utf-8")).items() if not k.startswith("_")}
 
 
-def corrected(source_id, row):
+CORRECTIONS = load_corrections(os.path.join(HERE, "corrections.json"))
+
+
+def corrected(source_id, row, corrections=None):
     """Les énoncés rétablis à la main (corrections.json), ou l'énoncé extrait s'il n'y en a pas."""
     statement = norm(row["statement"])
-    for prefix, replacement in CORRECTIONS.get(source_id, {}).items():
+    for prefix, replacement in (CORRECTIONS if corrections is None else corrections).get(source_id, {}).items():
         if statement.startswith(norm(prefix)):
             return [dict(row, statement=s) for s in replacement]
     return [row]
 
 
-def rows_of(source, txt_dir):
+def themes(rows, domain):
+    """Rubriques terminales d'un domaine qui n'a pas de tableau d'objectifs (culture littéraire et
+    artistique du français de cycle 4 : les entrées de chaque année), rendues comme des thèmes."""
+    headings = [r for r in rows if r["kind"] == "heading" and r["path"][:1] == [domain]]
+    filled = {tuple(r["path"]) for r in rows if r["kind"] == "objective"}
+    for h in headings:
+        path = tuple(h["path"])
+        if IGNORED.match(norm(h["title"])) or norm(h["title"]).startswith("conditions favorables"):
+            continue
+        if any(tuple(o["path"][:len(path)]) == path for o in headings if o is not h and len(o["path"]) > len(path)):
+            continue
+        if any(f[:len(path)] == path for f in filled):
+            continue
+        yield {"kind": "objective", "path": list(path[:-1]), "levels": h["levels"], "period": None,
+               "table": "Thème", "statement": h["title"], "columns": {}}
+
+
+def rows_of(source, txt_dir, corrections=None):
     """Lignes « objectif » d'un texte, avec un chemin débarrassé des rubriques sans contenu."""
     if source.get("transcription"):
         data = json.load(open(os.path.join(HERE, "transcriptions", source["transcription"]), encoding="utf-8"))
@@ -200,23 +222,36 @@ def rows_of(source, txt_dir):
                 yield {"path": path, "levels": [level], "statement": s, "period": None,
                        "table": "Objectifs d’apprentissage", "columns": {}}
         return
-    for row in extract(os.path.join(txt_dir, source["id"] + ".txt"), source.get("outline")):
+    rows = extract(os.path.join(txt_dir, source["id"] + ".txt"), source.get("outline"), source.get("subheadings"))
+    if source.get("themes_under"):
+        rows = rows + list(themes(rows, source["themes_under"]))
+    for row in rows:
         if row["kind"] != "objective":
             continue
         row["path"] = [p for p in row["path"] if not IGNORED.match(norm(p))]
         if source.get("drop_root"):
             row["path"] = row["path"][1:]
-        yield from corrected(source["id"], row)
+        yield from corrected(source["id"], row, corrections)
 
 
-def build(txt_dir):
-    today = EDITION + "T00:00:00"
-    document_id = uid(DOCUMENT_KEY)
-    doc_uri = {"title": "Programmes de l’école primaire", "identifier": document_id,
-               "uri": f"urn:uuid:{document_id}"}
+def build(txt_dir, ref=None):
+    ref = ref or PRIMAIRE
+    order, cycles = ref["order"], ref["cycles"]
+    corrections = {}
+    for path in ([ref["corrections"]] if isinstance(ref["corrections"], str) else ref["corrections"]):
+        for source_id, fixes in load_corrections(path).items():
+            corrections.setdefault(source_id, {}).update(fixes)
+
+    def uid(*parts):
+        return str(uuid.uuid5(ref["ns"], "\x1f".join(parts)))
+
+    today = ref["edition"] + "T00:00:00"
+    document_id = uid(ref["key"])
+    doc_uri = {"title": ref["short_title"], "identifier": document_id, "uri": f"urn:uuid:{document_id}"}
     items, associations, seen = [], [], {}
     children = {}                                   # parent → nombre d'enfants (pour les codes)
-    type_ids = {t: uid("type", t) for t in ITEM_TYPES}
+    item_types = ref.get("item_types", ITEM_TYPES)
+    type_ids = {t: uid("type", t) for t in item_types}
 
     def link(origin, destination, destination_title, seq):
         associations.append({
@@ -234,7 +269,7 @@ def build(txt_dir):
         """Crée l'énoncé s'il n'existe pas ; élargit ses niveaux et ses dates sinon."""
         if key in seen:
             item = seen[key]
-            item["educationLevel"] = sorted(set(item["educationLevel"]) | set(levels), key=ORDER.index)
+            item["educationLevel"] = sorted(set(item["educationLevel"]) | set(levels), key=order.index)
             if start and (not item.get("statusStartDate") or start < item["statusStartDate"]):
                 item["statusStartDate"] = start
             if "statusEndDate" in item and (end is None or end > item["statusEndDate"]):
@@ -249,7 +284,7 @@ def build(txt_dir):
             "humanCodingScheme": f"{code_prefix}.{children[parent]}" if code_prefix else None,
             "CFItemType": kind,
             "CFItemTypeURI": {"identifier": type_ids[kind], "title": kind, "uri": f"urn:uuid:{type_ids[kind]}"},
-            "educationLevel": sorted(set(levels), key=ORDER.index),
+            "educationLevel": sorted(set(levels), key=order.index),
             "language": "fr",
             "lastChangeDateTime": today,
         }
@@ -268,15 +303,15 @@ def build(txt_dir):
         link(identifier, parent, parent_title, children[parent])
         return item
 
-    for cycle_code, (title, levels) in CYCLES.items():
+    for cycle_code, (title, levels) in cycles.items():
         node(("cycle", cycle_code), title, "Cycle", document_id, doc_uri["title"], None, levels,
              abbreviated=f"Cycle {cycle_code[1]}")
         seen[("cycle", cycle_code)]["humanCodingScheme"] = cycle_code
 
-    for source in SOURCES:
-        for row in rows_of(source, txt_dir):
+    for source in ref["sources"]:
+        for row in rows_of(source, txt_dir, corrections):
             declared = row.get("levels") or []
-            if "keep" in source and row.get("table") != "Thème":
+            if "keep" in source and row.get("table") not in ("Thème", "Repères annuels de programmation"):
                 declared = []                       # 2020 : attendus et compétences valent pour le cycle
             levels = [lv for lv in declared if lv in source["levels"]]
             if declared and not levels:            # 6e, collège : hors du référentiel
@@ -307,7 +342,7 @@ def build(txt_dir):
             # Un énoncé par cycle : l'EMC et l'EVAR élémentaire couvrent deux cycles.
             by_cycle = {}
             for lv in levels:
-                c = source["cycle"] or next(c for c, (_, lvs) in CYCLES.items() if lv in lvs)
+                c = source["cycle"] or next(c for c, (_, lvs) in cycles.items() if lv in lvs)
                 by_cycle.setdefault(c, []).append(lv)
             for cycle_code, lvs in by_cycle.items():
                 cycle = seen[("cycle", cycle_code)]
@@ -319,7 +354,7 @@ def build(txt_dir):
                 if end:
                     # Texte remplacé à la rentrée suivante : ses rubriques sont rangées à part,
                     # pour ne pas se mêler à celles du programme qui lui succède.
-                    legacy = f"Programme de 2020 (jusqu’au {date.fromisoformat(end).strftime('%d/%m/%Y')})"
+                    legacy = f"Programme de {source.get('year', 2020)} (jusqu’au {date.fromisoformat(end).strftime('%d/%m/%Y')})"
                     trail = trail + ("legacy", source["id"])
                     parent = node(trail, legacy, "Domaine", parent["identifier"], parent["fullStatement"],
                                   parent["humanCodingScheme"], lvs, start, end)
@@ -342,19 +377,17 @@ def build(txt_dir):
     document = {
         "identifier": document_id,
         "uri": doc_uri["uri"],
-        "title": "Programmes de l’école primaire — cycles 1, 2 et 3",
+        "title": ref["title"],
         "creator": "Ministère de l’Éducation nationale",
         "publisher": "Open ENT",
-        "description": ("Programmes d’enseignement de la petite section au CM2, d’après les textes officiels publiés "
-                        "au Bulletin officiel. Chaque énoncé indique ses niveaux et ses dates d’application : les "
-                        "textes en vigueur et ceux déjà publiés pour une rentrée à venir y figurent ensemble."),
+        "description": ref["description"],
         "officialSourceURL": "https://eduscol.education.gouv.fr/sites/default/files/document/calendriernouveauxprogrammes-129025.pdf",
         "language": "fr",
         "version": "2026-2027",
         "adoptionStatus": "Adopted",
         "statusStartDate": R[2026],
         "lastChangeDateTime": today,
-        "subject": ["École primaire"],
+        "subject": ref["subject"],
         "notes": ("Énoncés repris mot pour mot des textes officiels ; seule la typographie des énumérations est "
                   "normalisée (initiale en capitale, « ; » final retiré). Le niveau scolaire est dans educationLevel, "
                   "l’échéance (« En fin de période 1 ») et les exemples de réussite dans notes."),
@@ -365,7 +398,7 @@ def build(txt_dir):
         "CFDocument": document,
         "CFDefinitions": {
             "CFItemTypes": [{"identifier": type_ids[t], "title": t, "description": t, "hierarchyCode": str(i),
-                             "lastChangeDateTime": today} for i, t in enumerate(ITEM_TYPES)],
+                             "lastChangeDateTime": today} for i, t in enumerate(item_types)],
             "CFLicenses": [{"identifier": uid("license", "etalab-2.0"), "title": "Licence Ouverte 2.0",
                             "licenseText": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
                             "lastChangeDateTime": today}],
@@ -377,9 +410,24 @@ def build(txt_dir):
 
 ORDER = ["PS", "MS", "GS", "CP", "CE1", "CE2", "CM1", "CM2"]
 
-if __name__ == "__main__":
-    package = build(sys.argv[1])
+PRIMAIRE = dict(
+    key=DOCUMENT_KEY, ns=NS, edition=EDITION, cycles=CYCLES, order=ORDER, sources=SOURCES,
+    corrections=os.path.join(HERE, "corrections.json"),
+    short_title="Programmes de l’école primaire",
+    title="Programmes de l’école primaire — cycles 1, 2 et 3",
+    description=("Programmes d’enseignement de la petite section au CM2, d’après les textes officiels publiés "
+                 "au Bulletin officiel. Chaque énoncé indique ses niveaux et ses dates d’application : les "
+                 "textes en vigueur et ceux déjà publiés pour une rentrée à venir y figurent ensemble."),
+    subject=["École primaire"],
+)
+
+
+def main(ref):
+    package = build(sys.argv[1], ref)
     json.dump(package, sys.stdout, ensure_ascii=False, indent=1)
     from collections import Counter
     print(f"{len(package['CFItems'])} énoncés, {len(package['CFAssociations'])} liens ; par type : "
           f"{dict(Counter(i['CFItemType'] for i in package['CFItems']))}", file=sys.stderr)
+
+if __name__ == "__main__":
+    main(PRIMAIRE)
