@@ -40,6 +40,7 @@ fr.openent.casestandards
 ├── service/                 accès PostgreSQL (schéma casestd)
 └── controller/
     ├── CaseController       le service normatif, public, sous /ims/case/v1p0
+    ├── ProgrammeController  consultation filtrée (niveau, matière) pour l'ENT — authentifié
     └── AdminController      import, publication, suppression — super administrateur
 ```
 
@@ -69,6 +70,22 @@ Aucune dépendance au-delà de `org.entcore:common`.
 | PUT | `/admin/documents/:id/publication` | Publie ou retire un référentiel |
 | DELETE | `/admin/documents/:id` | Supprime un référentiel et tout ce qui en dépend |
 | GET | `/admin/imports` | Journal des imports |
+
+### Consultation — `/case/programmes`, utilisateur connecté
+
+Ce ne sont pas des routes CASE : la norme ne filtre pas, et un consommateur reprend le paquet
+entier. Elles servent les écrans de l'ENT (dashboard) qui affichent le programme d'une classe sans
+rapatrier 5 Mo. Le super administrateur y voit aussi les référentiels non publiés, pour relire un
+import avant de le publier.
+
+| Méthode | Chemin | Rôle |
+|---|---|---|
+| GET | `/programmes` | Les référentiels, leurs niveaux et leurs matières (`{code, label, levels}`) |
+| GET | `/programmes/:id/tree?level=&subject=&q=&current=` | L'arbre à plat (`id, parent, seq, code, label, type, levels, notes, start, end`) des énoncés retenus **et de leurs ancêtres** ; `current` (vrai par défaut) écarte les énoncés hors de leur période de validité |
+| GET | `/programmes/items?ids=` | Des énoncés désignés par identifiant ou URI (rattachements d'un pack), avec leur référentiel |
+
+La matière d'un énoncé est le deuxième segment de son code (`C2.MAT.1.2.5` → `MAT`) ; son libellé
+est celui de l'énoncé de type « Enseignement » de même segment.
 
 ## Sécurité
 

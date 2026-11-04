@@ -2,6 +2,7 @@ package fr.openent.casestandards;
 
 import fr.openent.casestandards.controller.AdminController;
 import fr.openent.casestandards.controller.CaseController;
+import fr.openent.casestandards.controller.ProgrammeController;
 import fr.openent.casestandards.service.BundledFrameworks;
 import io.vertx.core.Future;
 import io.vertx.core.Promise;
@@ -25,6 +26,7 @@ public class Case extends BaseServer {
 	private Future<Void> initCase(CaseContext context) {
 		return addController(new CaseController(context))
 				.compose(v -> addController(new AdminController(context)))
+				.compose(v -> addController(new ProgrammeController(context)))
 				.onSuccess(v -> new BundledFrameworks(context).load())
 				.mapEmpty();
 	}
